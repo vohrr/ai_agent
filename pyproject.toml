@@ -1,0 +1,10 @@
+[project]
+name = "ai-agent"
+version = "0.1.0"
+description = "First attempt at building a custom AI Agent."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai==1.12.1",
+    "python-dotenv==1.1.0",
+]
