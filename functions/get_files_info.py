@@ -27,3 +27,4 @@ def get_dir_size(directory):
         inner_path = os.path.join(directory, inner_directory)
         directory_size += get_dir_size(inner_path)
     return directory_size
+

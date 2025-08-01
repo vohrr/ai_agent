@@ -1,7 +1,9 @@
 import unittest
 from functions.get_files_info import get_files_info 
+from functions.get_file_content import get_file_content
+from functions.write_file import write_file
 
-def main():
+def get_files_info_tests():
     print(f"Result for current directory:")
     print(get_files_info('calculator', '.'))
 
@@ -14,6 +16,20 @@ def main():
     print(f"Result for '../' directory:")
     print(get_files_info('calculator', '../'))
     
+def get_file_content_tests():
+    print(get_file_content("calculator", "lorem.txt"))
+    print(get_file_content("calculator", "main.py"))
+    print(get_file_content("calculator", "pkg/calculator.py"))
+    print(get_file_content("calculator", "/bin/cat"))
+    print(get_file_content("calculator", "pkg/does_not_exist.py"))
+
+
+def write_file_tests():
+    print(write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
+    print(write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
+    print(write_file("calculator", "/tmp/temp.txt", "this should not be allowed"))
+
+
 class AiAgentTests(unittest.TestCase):
     
     def test_get_calculator_current_directory(self):
@@ -29,5 +45,7 @@ class AiAgentTests(unittest.TestCase):
         self.assertEqual("calculator/pkg", result)
 
 if __name__ == "__main__":
-#    unittest.main()
-    main()
+    # unittest.main()
+    # get_files_info_tests()
+    # get_file_content_tests()
+    write_file_tests()
