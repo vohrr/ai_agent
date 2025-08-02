@@ -34,7 +34,6 @@ When a user asks a question or makes a request, make a function call plan. You c
 
 All paths you provide must be relative to the working directory. You do not need to specify the working directory in your function calls as it is automatically injected for security reasons.
 Looking in subdirectories of the working directory is acceptable in order to find the relevant files.
-Append the file extension to any requested file content in function parameters if not explicity provided 
 """
 
 def main(user_prompt, verbose):
