@@ -1,5 +1,20 @@
 import os 
 from functions.config import MAX_FILE_LENGTH  
+from google.genai import types
+
+schema_get_file_content = types.FunctionDeclaration(
+    name="get_file_content",
+    description="Gets the content of a specified file, constrained to the working directory.",
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "file_path": types.Schema(
+                type=types.Type.STRING, 
+                description="The location of the file to retrieve content from. Must be a file."
+            )
+        },
+    ),
+)
 
 def get_file_content(working_directory, file_path):
     abs_working_directory = os.path.abspath(working_directory)
