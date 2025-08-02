@@ -6,17 +6,19 @@ from functions.write_file import write_file
 from functions.run_python import run_python_file
 
 def get_files_info_tests():
-    print(f"Result for current directory:")
-    print(get_files_info('calculator', '.'))
+    # print(f"Result for current directory:")
+    # print(get_files_info('calculator', '.'))
+    #
+    # print(f"Result for 'pkg' directory:")
+    # print(get_files_info('calculator', 'pkg'))
+    #
+    # print(f"Result for '/bin' directory:")
+    # print(get_files_info('calculator', '/bin'))
+    #
+    # print(f"Result for '../' directory:")
+    # print(get_files_info('calculator', '../'))
 
-    print(f"Result for 'pkg' directory:")
     print(get_files_info('calculator', 'pkg'))
-
-    print(f"Result for '/bin' directory:")
-    print(get_files_info('calculator', '/bin'))
-
-    print(f"Result for '../' directory:")
-    print(get_files_info('calculator', '../'))
     
 def get_file_content_tests():
     print(get_file_content("calculator", "lorem.txt"))
@@ -57,5 +59,5 @@ if __name__ == "__main__":
     # unittest.main()
     # get_files_info_tests()
     # get_file_content_tests()
-    # write_file_tests()
+    # # write_file_tests()
     run_python_tests()

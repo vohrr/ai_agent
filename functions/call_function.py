@@ -23,8 +23,11 @@ def call_function(function_call, working_directory, verbose=False):
                 )
             ],
         )
+    if verbose:
+        print(f'Calling function:  {function_call.name}' + f'({function_call.args})') 
+    else:
+        print(f'- Calling function:  {function_call.name}') 
 
-    print(f'Calling function:  {function_call.name}' + f'({function_call.args})' if verbose else '') 
     args = function_call.args.copy()
     args['working_directory'] = working_directory
     function_result = ALLOWED_FUNCTIONS[function_call.name](**args)
