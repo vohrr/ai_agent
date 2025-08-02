@@ -1,6 +1,6 @@
 ## Mini AI Agent
 
-An AI code assistant that can read, write, debug, test, and run code on a project.  \ 
+An AI code assistant that can read, write, debug, test, and run code on a project.   \
 Currently powered by Google's Gemini 2.5 model
 
 ### Getting Started
